@@ -30,7 +30,7 @@ Dialog::Dialog(QWidget *parent) :
     foreach (const QSerialPortInfo &seriaPortInfo, QSerialPortInfo::availablePorts() ){
                if(seriaPortInfo.hasVendorIdentifier()){
                 //qDebug() << " Vendor ID: " << seriaPortInfo.vendorIdentifier();
-                //qDebug() << "port name is : " << seriaPortInfo.portName();
+                qDebug() << "port name is : " << seriaPortInfo.portName();
                 arduino_port_name = seriaPortInfo.portName();
                 ui->comboBox->addItem(arduino_port_name);
                 arduino_is_available = true;
